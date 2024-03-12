@@ -15,4 +15,4 @@ g++ main.cpp -o PI_darbs
 g++ main.cpp -o PI_darbs.exe
 PI_darbs.exe
 ```
-> Note: Ensure you have the GNU Compiler Collection installed to compile and run this C++ application.
+> Note: Ensure you have the GNU Compiler installed to compile and run this app.
