@@ -4,6 +4,7 @@
 #include <unordered_map>
 
 using namespace std;
+
 struct SpotData {
   double latitude;
   double longitude;
@@ -62,8 +63,7 @@ void showMapData(const unordered_map<string, SpotData> &data,
       }
     }
 
-    if (!display)
-      continue;
+    if (!display) continue;
 
     spot_name = "Name: " + it.first;
     latitude = "Latitude: " + to_string(it.second.latitude);
@@ -112,6 +112,7 @@ int main() {
       {"spot_8", {1.1420, 2.3130, 0, "", "", 180}},
       {"spot_9", {1.1421, 2.3131, 0, "", "Atļauja nr 3", 0}},
       {"spot_10", {1.1422, 2.3132, 4.50, "Maksas veids 4", "", 0}}};
+
 
   Filter filter{{{"price_per_hour", {3.0, 10000.0}}}};
 
