@@ -2,9 +2,6 @@
 #include <string>
 #include <unordered_map>
 
-// fix to cout is ambiguous
-// https://stackoverflow.com/questions/1452721/why-is-stdcout-ambiguous-when-trying-to-print-a-string-in-c
-
 using namespace std;
 
 struct SpotData
@@ -146,7 +143,13 @@ int main()
     Filter dynamicFilter;
     int filterType;
     do {
-      cout << "Ievadi filtra tipu (1-4, 5 beigtu filtru ievadi): ";
+      cout << "Izvēlies filtru:\n"
+           << "1 - cena stundā\n"
+           << "2 - laika limits (minutes)\n"
+           << "3 - maksājuma tips\n"
+           << "4 - atļauja\n"
+           << "5 - beigt ievadīt filtrus\n"
+           << "Izvēle: ";
       cin >> filterType;
       if (filterType < 1 || filterType > 5) 
         cout << "Nederīgs filtra veids.\n";
@@ -195,6 +198,7 @@ int main()
         dynamicFilter.stringFilters["permit"] = value;
       }
     } while (filterType <= 4);
+    // call the function
     showMapData(spotData, dynamicFilter);
   }
   return 0;
