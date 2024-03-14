@@ -7,12 +7,12 @@ C++ application for parking spot data management using `unordered_map`.
 
 ### Linux
 ```sh
-g++ main.cpp -o PI_darbs
+g++ main.cpp -std=c++17 -o PI_darbs
 ./PI_darbs
 ```
 ### Windows
 ```bash
-g++ main.cpp -o PI_darbs.exe
+g++ main.cpp -std=c++17 -o PI_darbs.exe
 PI_darbs.exe
 ```
 > Note: Ensure you have the GNU Compiler installed to compile and run this app.
